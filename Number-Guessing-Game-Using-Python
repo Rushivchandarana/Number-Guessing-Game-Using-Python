@@ -1,0 +1,26 @@
+n=18 #Number to be Guessed.!!
+i=1
+print("This is a Number Guessing Game.!!")
+print("Number of Guesses is limited to 9 times")
+print("Enter a number between 1 to 100")
+while(i<10):
+    inp=int(input("\nGuess a Number:\n"))
+    
+    if inp>n:
+        print("Try a lesser Number")
+        print("Number of Guesses left:", 9-i)
+        i=i+1
+        if i==10:
+            print("\nYou exceeded the number of guessing limit. Game Over.!!\nThanks for Playing!")
+            break
+    elif inp<n:
+        print("Try a Greater Number")
+        print("Number of Guesses left:", 9-i)
+        i=i+1
+        if i==10:
+            print("\nYou exceeded the number of guessing limit. Game Over.!!\nThanks for Playing!")
+            break
+    else:
+        print("Congratulations You Won.!!")
+        print("Number of Guesses taken:",i)
+        break
